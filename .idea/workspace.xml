@@ -4,24 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47c625be-4a1f-424f-bcb0-8bf1ab9671d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/api/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/api/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/Alerts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/NewWorkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/new-worker-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47c625be-4a1f-424f-bcb0-8bf1ab9671d3" name="Changes" comment="NEm jooososo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/UpdateWorkerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/update-worker-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/NewWorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/NewWorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/new-worker-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/new-worker-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -48,16 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "C:/Petrik/AMAF_Java/SomogyiBotond_JavaFxRestClientDolgozat/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Petrik\AMAF_Java\SomogyiBotond_JavaFxRestClientDolgozat\src\main\resources\hu\petrik\somogyibotond_javafxrestclientdolgozat" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hu.petrik.somogyibotond_javafxrestclientdolgozat" />
       <recent name="hu.petrik.api" />
     </key>
   </component>
@@ -94,8 +92,16 @@
       <workItem from="1669275400744" duration="2092000" />
       <workItem from="1669277515146" duration="7679000" />
       <workItem from="1669308672390" duration="6000" />
-      <workItem from="1669308686463" duration="4954000" />
+      <workItem from="1669308686463" duration="6797000" />
     </task>
+    <task id="LOCAL-00001" summary="NEm jooososo">
+      <created>1669313793331</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669313793331</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,5 +117,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="NEm jooososo" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEm jooososo" />
   </component>
 </project>

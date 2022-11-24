@@ -15,7 +15,13 @@ public class LocalDateDeserializer implements JsonDeserializer<LocalDate> {
     @Override
     public LocalDate deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
             throws JsonParseException {
-        return LocalDate.parse(json.getAsString().substring(0,12).trim(),
+        String tmpJson = json.getAsString();
+        if (json.getAsString().length() >= 12) {
+            tmpJson = tmpJson.substring(0,12);
+        }else {
+            tmpJson = tmpJson.substring(0,11);
+        }
+        return LocalDate.parse(tmpJson.trim(),
                 DateTimeFormatter.ofPattern("MMM d, yyyy").withLocale(Locale.ENGLISH));
     }
 

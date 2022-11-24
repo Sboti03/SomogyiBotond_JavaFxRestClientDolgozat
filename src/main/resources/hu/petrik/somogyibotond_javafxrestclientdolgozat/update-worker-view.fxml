@@ -14,7 +14,7 @@
 <?import javafx.scene.control.SpinnerValueFactory?>
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
       spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="hu.petrik.somogyibotond_javafxrestclientdolgozat.NewWorkerController">
+      fx:controller="hu.petrik.somogyibotond_javafxrestclientdolgozat.UpdateWorkerController">
     <children>
         <Label text="Név">
             <font>
@@ -46,7 +46,7 @@
         <DatePicker fx:id="hireDateField"/>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#newClick" text="Felvétel"/>
+                <Button mnemonicParsing="false" onAction="#changeClick" text="Módosítás"/>
             </children>
         </HBox>
     </children>

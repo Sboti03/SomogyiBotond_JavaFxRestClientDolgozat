@@ -8,18 +8,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
+import java.util.Optional;
 
 public class MainController extends Alerts {
 
@@ -39,6 +34,7 @@ public class MainController extends Alerts {
 
     @FXML
     private void initialize() {
+
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         paymentCol.setCellValueFactory(new PropertyValueFactory<>("payment"));
         postCol.setCellValueFactory(new PropertyValueFactory<>("post"));
@@ -73,7 +69,45 @@ public class MainController extends Alerts {
 
     @FXML
     public void updateBtnClick(ActionEvent actionEvent) {
+        int selectedIndex = workerTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            warning("Válasszon ki egy dolgozót!");
+            return;
+        }
+        Worker selectedWorker = workerTable.getSelectionModel().getSelectedItem();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("update-worker-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 250, 350);
+            Stage stage = new Stage();
+            stage.setTitle("Dolgozó módosítás");
+            UpdateWorkerController controller = fxmlLoader.getController();
+            controller.setWorker(selectedWorker);
+            showStage(scene, stage);
+        } catch (IOException e) {
+            error("Nem sikerült betölteni", e.getMessage());
+        }
 
+
+
+
+    }
+
+    private void showStage(Scene scene, Stage stage) {
+        stage.setScene(scene);
+        stage.show();
+        deleteBtn.setDisable(true);
+        newBtn.setDisable(true);
+        updateBtn.setDisable(true);
+        stage.setOnHidden(event -> {
+            deleteBtn.setDisable(false);
+            newBtn.setDisable(false);
+            updateBtn.setDisable(false);
+            try {
+                loadOrdersFromServer();
+            } catch (IOException e) {
+                error("Nem sikerült lekérni az adatokat a szerverről", e.getMessage());
+            }
+        });
     }
 
     @FXML
@@ -83,21 +117,7 @@ public class MainController extends Alerts {
             Scene scene = new Scene(fxmlLoader.load(), 250, 350);
             Stage stage = new Stage();
             stage.setTitle("Új dolgozó");
-            stage.setScene(scene);
-            stage.show();
-            deleteBtn.setDisable(true);
-            newBtn.setDisable(true);
-            updateBtn.setDisable(true);
-            stage.setOnHidden(event -> {
-                deleteBtn.setDisable(false);
-                newBtn.setDisable(false);
-                updateBtn.setDisable(false);
-                try {
-                    loadOrdersFromServer();
-                } catch (IOException e) {
-                    error("Nem sikerült lekérni az adatokat a szerverről", e.getMessage());
-                }
-            });
+            showStage(scene, stage);
         } catch (IOException e) {
             error("Nem sikerült betölteni", e.getMessage());
         }
@@ -106,6 +126,28 @@ public class MainController extends Alerts {
 
     @FXML
     public void deleteBtnClick(ActionEvent actionEvent) {
-
+        int selectedIndex = workerTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            warning("Válasszon ki egy dolgozót!");
+            return;
+        }
+        Worker selectedWorker = workerTable.getSelectionModel().getSelectedItem();
+        Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmation.setHeaderText(String.format("Biztos kiakarod törölni: %s?", selectedWorker.getName()));
+        Optional<ButtonType> optionalButtonType = confirmation.showAndWait();
+        if (optionalButtonType.isEmpty()) {
+            error("Ismeretlen hiba");
+            return;
+        }
+        ButtonType clickedButton = optionalButtonType.get();
+        if (clickedButton.equals(ButtonType.OK)) {
+            String url = App.BASE_URL + "/" + selectedWorker.getId();
+            try {
+                RequestHandler.delete(url);
+                loadOrdersFromServer();
+            } catch (IOException e) {
+                error("Hiba a szerverre történő kapcsolódás során");
+            }
+        }
     }
 }

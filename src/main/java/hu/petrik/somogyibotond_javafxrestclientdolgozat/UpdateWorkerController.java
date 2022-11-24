@@ -13,19 +13,19 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.InterfaceAddress;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-public class NewWorkerController extends Alerts {
-    @javafx.fxml.FXML
+public class UpdateWorkerController extends Alerts {
+    @FXML
     private TextField nameField;
-    @javafx.fxml.FXML
+    @FXML
     private Spinner<Integer> paymentField;
-    @javafx.fxml.FXML
+    @FXML
     private ChoiceBox<Worker.posts> postsSelect;
-    @javafx.fxml.FXML
+    @FXML
     private DatePicker hireDateField;
+
+    Worker worker;
 
     @FXML
     public void initialize() {
@@ -34,10 +34,22 @@ public class NewWorkerController extends Alerts {
         postsSelect.getItems().add(Worker.posts.TeamLeader);
         postsSelect.getItems().add(Worker.posts.ProjectManager);
 
+
     }
 
+    public Worker getWorker() {
+        return worker;
+    }
 
-    public void newClick(ActionEvent actionEvent) {
+    public void setWorker(Worker worker) {
+        this.worker = worker;
+        nameField.setText(this.worker.getName());
+        paymentField.getValueFactory().setValue(this.worker.getPayment());
+        postsSelect.setValue(this.worker.getPost());
+        hireDateField.setValue(this.worker.getHireDate());
+    }
+
+    public void changeClick(ActionEvent actionEvent) {
         String name = nameField.getText();
         int payment = paymentField.getValue();
         Worker.posts post = postsSelect.getValue();
@@ -53,14 +65,15 @@ public class NewWorkerController extends Alerts {
         if (hireDate == null) {
             hireDate = LocalDate.now();
         }
-        Worker newWorker = new Worker(name,payment,post, hireDate);
+        Worker newWorker = new Worker(name, payment, post, hireDate);
         Gson converter = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateSerializer()).create();
         String json = converter.toJson(newWorker);
         try {
-            Response response = RequestHandler.post(App.BASE_URL, json);
-            if (response.getResponseCode() == 201) {
-                warning("Hozzá adva!");
-                Stage stage = (Stage)this.nameField.getScene().getWindow();
+            String url = App.BASE_URL + "/" + this.worker.getId();
+            Response response = RequestHandler.put(url, json);
+            if (response.getResponseCode() == 200) {
+                warning("Frissítve!");
+                Stage stage = (Stage) this.nameField.getScene().getWindow();
                 stage.close();
             } else {
                 error(response.getContent());
@@ -70,5 +83,4 @@ public class NewWorkerController extends Alerts {
         }
 
     }
-
 }
