@@ -16,6 +16,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>17.0.2</version>
@@ -61,7 +67,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                hu.petrik.somogyibotond_javafxrestclientdolgozat/hu.petrik.somogyibotond_javafxrestclientdolgozat.HelloApplication
+                                hu.petrik.somogyibotond_javafxrestclientdolgozat/hu.petrik.somogyibotond_javafxrestclientdolgozat.App
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.petrik.somogyibotond_javafxrestclientdolgozat.MainController">
+   <children>
+      <Label text="Termékek">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBtnClick" text="Módosítás" />
+            <Button fx:id="newBtn" mnemonicParsing="false" onAction="#newBtnClick" text="Új felvétel" />
+            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnClick" text="Törlés" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="workerTable">
+        <columns>
+          <TableColumn fx:id="nameCol" maxWidth="-1.0" minWidth="120.0" prefWidth="-1.0" text="Név" />
+            <TableColumn fx:id="paymentCol" minWidth="100.0" prefWidth="-1.0" text="Fizetés" />
+            <TableColumn fx:id="postCol" minWidth="150.0" prefWidth="-1.0" text="Poszt" />
+            <TableColumn fx:id="hireDateCol" minWidth="200.0" prefWidth="-1.0" text="Felvétel kezdete" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

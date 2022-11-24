@@ -4,16 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47c625be-4a1f-424f-bcb0-8bf1ab9671d3" name="Changes" comment="" />
+    <list default="true" id="47c625be-4a1f-424f-bcb0-8bf1ab9671d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/api/RequestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/api/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/Alerts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/LocalDateSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/NewWorkerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/new-worker-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/petrik/somogyibotond_javafxrestclientdolgozat/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hu/petrik/somogyibotond_javafxrestclientdolgozat/main-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Hz5yGFtGuSowNkyBX7c9Obf2yi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hu.petrik.api" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.petrik.somogyibotond_javafxrestclientdolgozat.App" />
+      <module name="SomogyiBotond_JavaFxRestClientDolgozat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.petrik.somogyibotond_javafxrestclientdolgozat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -23,9 +89,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669273401838</updated>
-      <workItem from="1669273403451" duration="2000" />
+      <workItem from="1669273403451" duration="1750000" />
+      <workItem from="1669275324583" duration="61000" />
+      <workItem from="1669275400744" duration="2092000" />
+      <workItem from="1669277515146" duration="7679000" />
+      <workItem from="1669308672390" duration="6000" />
+      <workItem from="1669308686463" duration="4954000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
